@@ -1,0 +1,14 @@
+development:
+  PORT: 3000
+  DATA_ORIGIN:
+    BASE_URL: "https://nnf8tv5sf4.execute-api.us-east-1.amazonaws.com/prd"
+  SQS:
+    REGION: "us-east-1"
+    URL: "https://sqs.us-east-1.amazonaws.com/{xxxxx}/mojo-poc-queue"
+production:
+  PORT: 3000
+  DATA_ORIGIN:
+    BASE_URL: "https://nnf8tv5sf4.execute-api.us-east-1.amazonaws.com/prd"
+  SQS:
+    REGION: "us-east-1"
+    URL: "https://sqs.us-east-1.amazonaws.com/{xxxxx}/mojo-poc-queue"
