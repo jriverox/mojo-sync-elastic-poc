@@ -11,7 +11,6 @@
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^8.0.8",
-    "perf_hooks": "0.0.1",
     "yenv": "^2.1.1"
   },
   "devDependencies": {
