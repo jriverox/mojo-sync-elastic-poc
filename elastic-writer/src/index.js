@@ -1,17 +1,17 @@
 'use strict'
-const DocumentProcessor = require('./services/document.service')
-const processor = new DocumentProcessor()
+const DocumentService = require('./services/document.service')
+const service = new DocumentService()
 
 module.exports.handler = async event => {
   const allDocuments = []
   for (const record of event.Records) {
     const body = JSON.parse(record.body)
     const documents = body.data
-    allDocuments.push(documents)
+    allDocuments.push(...documents)
   }
 
-  // console.log(allDocuments)
-  const response = await processor.execute(allDocuments)
+  console.log(allDocuments)
+  // const response = await service.execute(allDocuments)
   // console.log(response)
   // console.log(event)
   return {

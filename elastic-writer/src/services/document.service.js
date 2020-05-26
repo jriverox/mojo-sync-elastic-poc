@@ -7,7 +7,7 @@ const repository = new DocumentRepository()
 
 module.exports = class DocumentProcessor {
   async execute (documents) {
-    const chunkedArray = utils.chunkArray(documents)
+    const chunkedArray = utils.chunkArray(documents, env.ELASTICSEARCH.MAX_BATCH_SIZE)
     const retries = env.ELASTICSEARCH.BACKOFF_RETRIES
     const responses = []
 
