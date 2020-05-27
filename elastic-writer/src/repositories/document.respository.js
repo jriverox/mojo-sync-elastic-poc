@@ -12,7 +12,6 @@ module.exports = class DocumentRepository {
     const indexName = env.ELASTICSEARCH.INDEX
     const body = this.getBulkBody(documents, indexName)
     console.log('body', body)
-    // const body = documents.flatMap(doc => [{ index: { _index: indexName } }, doc])
     return await this.client.bulk({ body })
   }
 
