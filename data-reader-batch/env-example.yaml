@@ -1,0 +1,19 @@
+development:
+  PORT: 3000
+  BACKOFF_RETRIES: 3
+  DATA_ORIGIN:
+    BASE_URL: "https://nnf8tv5sf4.execute-api.us-east-1.amazonaws.com/prd"
+  SQS:
+    REGION: "us-east-1"
+    URL: "https://sqs.us-east-1.amazonaws.com/{xxxxx}/mojo-poc-queue"
+    MAX_BATCH_SIZE: 250
+production:
+  PORT: 3000
+  BACKOFF_RETRIES: 3
+  DATA_ORIGIN:
+    BASE_URL: "https://nnf8tv5sf4.execute-api.us-east-1.amazonaws.com/prd"
+  SQS:
+    REGION: "us-east-1"
+    URL: "https://sqs.us-east-1.amazonaws.com/{xxxxx}/mojo-poc-queue"
+    MAX_BATCH_SIZE: 250
+    
